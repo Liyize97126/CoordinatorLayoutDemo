@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coo_lay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF">
+
+            <ImageView
+                android:id="@+id/image_show"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_margin="20dp"
+                android:src="@drawable/chang_01"
+                android:scaleType="fitXY"
+                app:layout_scrollFlags="scroll"/>
+
+            <TextView
+                android:id="@+id/text_show"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="你好呀！很高兴认识你！"
+                android:textSize="20sp"
+                android:layout_margin="20dp"
+                android:textColor="#000000"
+                app:layout_scrollFlags="scroll"/>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/view_bg_style"
+            android:elevation="10dp"
+            android:layout_marginTop="-10dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tab_lay_show"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                app:tabMode="scrollable"
+                app:tabIndicatorHeight="4dp"
+                app:tabTextColor="#000000">
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tab1" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tab2" />
+
+            </com.google.android.material.tabs.TabLayout>
+
+            <com.yz.coordinatorlayoutdemo.MyViewPager
+                android:id="@+id/view_show"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</ScrollView>
